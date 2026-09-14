@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22b73842-a113-488a-bf43-0e5ec92c6255" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/RepositoryContracts/ICommentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/RepositoryContracts/ICommentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/RepositoryContracts/IPostRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/RepositoryContracts/IPostRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/RepositoryContracts/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/RepositoryContracts/IUserRepository.cs" afterDir="false" />
-    </list>
+    <list default="true" id="22b73842-a113-488a-bf43-0e5ec92c6255" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +22,7 @@
     "accountId": "4b2cbc99-9cbd-4c9b-bc89-d71d50e6e461"
   }
 }]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5,
   &quot;fromUser&quot;: false
@@ -67,9 +58,12 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="assignment2 setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="assignment2 setup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,16 +1,16 @@
 ﻿using Entities;
 using RepositoryContracts;
 
-namespace InMemoryRepository;
+namespace InMemoryRepositories;
 
 public class UserInMemoryRepository : IUserRepository
 {
+    List<User> users;
+
     public Task<User> AddAsync(User user)
     {
-        user.Id = users.Any()
-            ? users.Max(u => u.Id) + 1
-            : 1;
-        users.add(user);
+        user.Id = users.Any() ? users.Max(u => u.Id) + 1 : 1;
+        users.Add(user);
         return Task.FromResult(user);
     }
 
@@ -19,8 +19,7 @@ public class UserInMemoryRepository : IUserRepository
         User? existingUser = users.SingleOrDefault(u => u.Id == user.Id);
         if (existingUser is null)
         {
-            throw new InvalidOperationException(
-                $"User with ID '{user.Id}' not found")
+            throw new InvalidOperationException($"User with ID '{user.Id}' not found");
         }
 
         users.Remove(existingUser);
@@ -47,8 +46,8 @@ public class UserInMemoryRepository : IUserRepository
         if (user is null)
         {
             throw new InvalidOperationException($"User with ID '{id}' not found");
-        } 
-        
+        }
+
         return Task.FromResult(user);
     }
 
