@@ -5,7 +5,12 @@ namespace InMemoryRepositories;
 
 public class CommentInMemoryRepository : ICommentRepository
 {
-    List<Comment> comments;
+    List<Comment> comments = new()
+    {
+        new Comment { Id = 1, Body = "Great post!", UserId = 2, PostId = 1 },
+        new Comment { Id = 2, Body = "Thanks for sharing.", UserId = 3, PostId = 1 },
+        new Comment { Id = 3, Body = "Interesting read.", UserId = 1, PostId = 2 }
+    };
 
     public Task<Comment> AddAsync(Comment comment)
     {
@@ -13,7 +18,7 @@ public class CommentInMemoryRepository : ICommentRepository
         comments.Add(comment);
         return Task.FromResult(comment);
     }
-    
+
 
     public Task UpdateAsync(Comment comment)
     {
