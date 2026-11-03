@@ -1,0 +1,55 @@
+@page "/posts/create"
+@attribute [Authorize]
+@inject IPostService PostService
+@inject NavigationManager Navigation
+
+<PageTitle>Create post</PageTitle>
+
+<h3>Create post</h3>
+
+<div class="mb-3">
+    <label class="form-label">Title</label>
+    <input class="form-control" @bind="title" />
+</div>
+<div class="mb-3">
+    <label class="form-label">Body</label>
+    <textarea class="form-control" rows="5" @bind="body"></textarea>
+</div>
+
+<button class="btn btn-primary" @onclick="CreateAsync">Create post</button>
+
+@if (!string.IsNullOrEmpty(error))
+{
+    <div class="alert alert-danger mt-3">@error</div>
+}
+
+@code {
+    [CascadingParameter] public Task<AuthenticationState> State { get; set; } = default!;
+
+    private string title = "";
+    private string body = "";
+    private string error = "";
+
+    private async Task CreateAsync()
+    {
+        error = "";
+
+        try
+        {
+            AuthenticationState authState = await State;
+            int userId = authState.User.GetUserId();
+
+            PostDto post = await PostService.AddPostAsync(new CreatePostDto
+            {
+                Title = title,
+                Body = body,
+                UserId = userId
+            });
+            Navigation.NavigateTo($"/posts/{post.Id}");
+        }
+        catch (Exception e)
+        {
+            error = e.Message;
+        }
+    }
+}

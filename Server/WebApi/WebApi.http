@@ -1,6 +1,22 @@
-@WebApi_HostAddress = http://localhost:5087
+@host = http://localhost:5087
 
-GET {{WebApi_HostAddress}}/weatherforecast/
-Accept: application/json
+### Create a user
+POST {{host}}/users
+Content-Type: application/json
 
-###
+{ "userName": "alice", "password": "pw" }
+
+### Create a post
+POST {{host}}/posts
+Content-Type: application/json
+
+{ "title": "Hello", "body": "First post", "userId": 1 }
+
+### Add a comment
+POST {{host}}/comments
+Content-Type: application/json
+
+{ "body": "Nice!", "userId": 1, "postId": 1 }
+
+### Get the post with comments
+GET {{host}}/posts/1?includeComments=true
